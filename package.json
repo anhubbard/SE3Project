@@ -1,0 +1,22 @@
+{
+  "name": "se3project",
+  "version": "1.0.0",
+  "description": "A simple node application for the first project in Software Engineering Management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhubbard/SE3Project.git"
+  },
+  "author": "Ryan McCourt and Amber Hubbard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anhubbard/SE3Project/issues"
+  },
+  "homepage": "https://github.com/anhubbard/SE3Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
