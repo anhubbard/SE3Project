@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+        ordering:
+                container_name: ordering_service
+                build: ./OrderingService
+                ports:
+                        - "80:80"
