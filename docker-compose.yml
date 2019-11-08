@@ -1,4 +1,4 @@
-version: '1'
+version: '2'
 
 services:
         ordering:
@@ -6,7 +6,6 @@ services:
                 build: ./OrderingService
                 ports:
                         - "80:80"
-
         monitoring:
                 container_name: monitoring_service
                 build: ./MonitoringService
