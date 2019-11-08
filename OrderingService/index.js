@@ -10,7 +10,11 @@ app.use(morgan('tiny', {stream: filein}))
 */
 
 app.get('/version', function (req, res) { 
-	res.send('This is version 0 of the HotBurger service');
+	res.send('This is version 1 of the HotBurger service');
+});
+
+app.get('/getmenu', function (req, res) {
+	res.send("Hotdog: $20\nHamburger: $35\nSoda: $4\nCookie: $6")
 });
 
 /*
