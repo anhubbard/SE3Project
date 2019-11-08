@@ -10,21 +10,16 @@ app.use(morgan('tiny', {stream: filein}))
 */
 
 app.get('/version', function (req, res) { 
-	res.send('This is version 1 of the HotBurger service');
+	return res.status(200).send('This is version 1 of the HotBurger service');
 });
 
 app.get('/getmenu', function (req, res) {
-	res.send("Hotdog: $20\nHamburger: $35\nSoda: $4\nCookie: $6")
+	return res.status(200).send("Hotdog: $20\nHamburger: $35\nSoda: $4\nCookie: $6")
 });
 
-/*
-app.get('/logs', function (req, res) {
-	var data = fs.readFileSync('log.log', 'utf8');
-
-	console.log(data);
-	res.send(data);
+app.post('/purchase/:item/:quantity', function (req, res) {
+	return res.status(200).send("Ordered: " + req.params.quantity + " " + req.params.item + "(s).")
 });
-*/
 
 app.listen(80, function() {
 	console.log("Listening on port 80");
