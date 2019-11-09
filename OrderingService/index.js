@@ -6,7 +6,7 @@ var path = require('path');
 var date = new Date();
 
 /*
-var filein = fs.createWriteStream(path.join(__dirname, 'log.log'), {flags: 'a'})
+var filein = fs.createWriteStream(path.join(__dirname, '/Test/log.log'), {flags: 'a'})
 app.use(morgan('tiny', {stream: filein}))
 */
 
@@ -19,7 +19,7 @@ app.get('/getmenu', function (req, res) {
 });
 
 app.post('/purchase/:item/:quantity', function (req, res) {
-	return res.status(200).send("Ordered: " + req.params.quantity + " " + req.params.item + "(s). (" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + ")" );
+	return res.status(200).send("Ordered: " + req.params.quantity + " " + req.params.item + "(s). (" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + " UTC)" );
 });
 
 app.listen(80, function() {
