@@ -28,7 +28,7 @@ app.post('/purchase/:item/:quantity', function (req, res) {
 
 function getTime()
 {
-	return(date.getHours() + ":" + date.getMinutes() + ":" date.getSeconds() + "UTC");
+	return(date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "UTC");
 }
 
 app.listen(80, function() {
