@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const fs = require('fs');
 
 app.get('/gettotal', function (req, res) {
 	return res.status(200).send("Total earnings: ")
@@ -19,6 +20,11 @@ app.get('/getlastrequeststatus', function (req, res) {
 
 app.get('/getlastrequesttime', function (req, res) {
 	return res.status(200).send("Time of last request: ");
+});
+
+app.get('/logtest', function (req, res) {
+	var data = fs.readFileSync('log/log.log', 'utf8');
+	res.send(data);
 });
 
 app.listen(8080, function() {
