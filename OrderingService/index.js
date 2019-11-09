@@ -6,7 +6,7 @@ var path = require('path');
 var date = new Date();
 
 
-var filein = fs.createWriteStream(path.join(__dirname, 'log.log'), {flags: 'a'})
+var filein = fs.createWriteStream(path.join(__dirname, 'log/log.log'), {flags: 'a'})
 app.use(morgan('tiny', {stream: filein}))
 
 
