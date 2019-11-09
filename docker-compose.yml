@@ -4,12 +4,19 @@ services:
         ordering:
                 container_name: ordering_service
                 build: ./OrderingService
+                volumes:
+                        - "my-logs:/SE3Project/OrderingService/log.log"
                 ports:
                         - "80:80"
         monitoring:
                 container_name: monitoring_service
-                build: ./MonitoringService                 
+                build: ./MonitoringService
+                volumes:
+                        - "my-logs:/SE3Project/MonitoringService/log.log"                
                 ports:
                         - "8080:8080"
+volumes:
+        my-logs:
+                external: false
                           
                           
