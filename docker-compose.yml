@@ -8,6 +8,8 @@ services:
                         - "80:80"
         monitoring:
                 container_name: monitoring_service
-                build: ./MonitoringService
+                build: ./MonitoringService                 
                 ports:
                         - "8080:8080"
+                          
+                          
