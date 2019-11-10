@@ -62,23 +62,23 @@ app.get('/getrequestcount', function (req, res) {
 });
 
 app.get('/getlastrequeststatus', function (req, res) {
-	return res.status(200).send("Last request status: 200");
+	return res.status(200).send("Last request status: 200"); //Since if the request is in the logs, it will always be 200.
 });
 
 app.get('/getlastrequesttime', function (req, res) {
 	var lines = getLines();
-	var line = lines[lines.length-1];
+	var line = lines[lines.length-2];
 
 	if(line[0] == "PURCHASE")
 	{
-		//console.log(line);
-		//console.log(line[3]);
+		console.log(line);
+		console.log(line[4].toString());
 		return res.status(200).send("Time of last request: " + line[4]);
 	}
 	else
 	{
-		//console.log(line);
-		//console.log(line[1]);
+		console.log(line);
+		console.log(line[1].toString());
 		return res.status(200).send("Time of last request: " + line[1]);
 	}
 });
