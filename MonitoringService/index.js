@@ -13,7 +13,7 @@ app.get('/gettotal', function (req, res) {
 		var line = lines[i].split(" ");
 		if(line[0] == "PURCHASE")
 		{
-			var total = total + line[3];	
+			var total = total + parseInt(line[3]);	
 		}
 	}
 	
