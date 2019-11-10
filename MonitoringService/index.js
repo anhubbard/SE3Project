@@ -72,10 +72,11 @@ app.get('/getlastrequesttime', function (req, res) {
 	if(line[0] == "PURCHASE")
 	{
 		console.log(line);
-		console.log(line[0].toString());
-		console.log(line[1].toString());
-		console.log(line[3].toString());
-		console.log(line[4].toString());
+		console.log("0: " + line[0].toString());
+		console.log("1: " + line[1].toString());
+		console.log("2: " + line[2].toString());
+		console.log("3: " + line[3].toString());
+		console.log("4: " + line[4].toString());
 		return res.status(200).send("Time of last request: " + line[4]);
 	}
 	else
