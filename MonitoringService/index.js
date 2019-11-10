@@ -23,7 +23,7 @@ app.get('/getlastrequesttime', function (req, res) {
 });
 
 app.get('/logtest', function (req, res) {
-	var data = fs.readFileSync('log/log.log', 'utf8');
+	var data = fs.readFileSync('my-log/log.log', 'utf8');
 	res.send(data);
 });
 

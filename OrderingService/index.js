@@ -12,17 +12,17 @@ var date = new Date();
 
 app.get('/version', function (req, res) { 
 	
-	fs.appendFile('log/log.log', ('VERSION '+ getTime() + '\n'), function (err) {});
+	fs.appendFile('my-log/log.log', ('VERSION '+ getTime() + '\n'), function (err) {});
 	return res.status(200).send('This is version 1 of the HotBurger service');
 });
 
 app.get('/getmenu', function (req, res) {
-	fs.appendFile('log/log.log', ('MENU ' + getTime() + '\n'), function (err) {});
+	fs.appendFile('my-log/log.log', ('MENU ' + getTime() + '\n'), function (err) {});
 	return res.status(200).send("Hotdog: $20\nHamburger: $35\nSoda: $4\nCookie: $6");
 });
 
 app.post('/purchase/:item/:quantity', function (req, res) {
-	fs.appendFile('log/log.log', ('PURCHASE ' + req.params.item + ' ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n'), function (err) {});	
+	fs.appendFile('my-log/log.log', ('PURCHASE ' + req.params.item + ' ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n'), function (err) {});	
 	return res.status(200).send("Purchase successful!");
 });
 

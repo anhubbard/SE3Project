@@ -5,14 +5,14 @@ services:
                 container_name: ordering_service
                 build: ./OrderingService
                 volumes:
-                        - "my-logs:/SE3Project/OrderingService/log"
+                        - "my-log:/SE3Project/OrderingService/my-log"
                 ports:
                         - "80:80"
         monitoring:
                 container_name: monitoring_service
                 build: ./MonitoringService
                 volumes:
-                        - "my-logs:/SE3Project/MonitoringService/log:ro"                
+                        - "my-log:/SE3Project/MonitoringService/my-log:ro"                
                 ports:
                         - "8080:8080"
 volumes:

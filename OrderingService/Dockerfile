@@ -3,7 +3,6 @@ RUN apk update && apk add git
 RUN git clone https://github.com/anhubbard/SE3Project.git
 WORKDIR /SE3Project/OrderingService
 RUN npm install
-RUN rm log/log.log
 CMD ["git", "pull"]
-CMD ["touch", "log/log.log"]
+CMD ["touch", "my-log/log.log"]
 CMD ["node", "index.js"]  
