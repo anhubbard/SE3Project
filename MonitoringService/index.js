@@ -29,7 +29,7 @@ app.get('/gettopseller', function (req, res) {
 
 	for(var i = 0; i < lines.length; i++)
 	{
-		var line = lines[i].slpit(" ");
+		var line = lines[i].split(" ");
 		if(line[0] == "PURCHASE")
 		{
 			if(line[1].toLowerCase() == "hotdog")
