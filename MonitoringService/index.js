@@ -55,7 +55,7 @@ app.get('/gettopseller', function (req, res) {
 
 app.get('/getrequestcount', function (req, res) {
 	var lines = getLines();
-	return res.status(200).send("Total number of requests: " + lines.length-1);
+	return res.status(200).send("Total number of requests: " + (lines.length)-1);
 });
 
 app.get('/getlastrequeststatus', function (req, res) {
