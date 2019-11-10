@@ -67,27 +67,27 @@ app.get('/getlastrequeststatus', function (req, res) {
 
 app.get('/getlastrequesttime', function (req, res) {
 	var lines = getLines();
-	var currentLine = (lines.length-2);
-	var line = lines[currentLine];
+	var line = lines[lines.length-2];
+	var splitLine = line.split(" ");
 	
-	var time = line[4];
-	console.log(time);
+	//var time = line[4];
+	//console.log(time);
 
-	if(line[0] == "PURCHASE")
+	if(splitLine[0] == "PURCHASE")
 	{
-		console.log(line);
-		console.log("0: " + line[0].toString());
-		console.log("1: " + line[1].toString());
-		console.log("2: " + line[2].toString());
-		console.log("3: " + line[3].toString());
-		console.log("4: " + line[4].toString());
-		return res.status(200).send("Time of last request: " + line[4]);
+		//console.log(line);
+		//console.log("0: " + line[0].toString());
+		//console.log("1: " + line[1].toString());
+		//console.log("2: " + line[2].toString());
+		//console.log("3: " + line[3].toString());
+		//console.log("4: " + line[4].toString());
+		return res.status(200).send("Time of last request: " + splitLine[4]);
 	}
 	else
 	{
-		console.log(line);
-		console.log(line[1].toString());
-		return res.status(200).send("Time of last request: " + line[1]);
+		//console.log(line);
+		//console.log(line[1].toString());
+		return res.status(200).send("Time of last request: " + splitLine[1]);
 	}
 });
 
