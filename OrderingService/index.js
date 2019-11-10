@@ -26,7 +26,7 @@ app.post('/purchase/:item/:quantity', function (req, res) {
 	return res.status(200).send('PURCHASE ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n');
 });
 
-function getPrice(var item, var quantity)
+function getPrice(item, quantity)
 {
 	if(item == "Hotdog")
 	{
