@@ -30,19 +30,19 @@ function getPrice(item, quantity)
 {
 	if(item.toLowerCase() == "hotdog")
 	{
-		return('$' + (20*quantity) + ' ');
+		return('$ ' + (20*quantity) + ' ');
 	}
 	if(item.toLowerCase() == "hamburger")
         {
-                return('$' + (35*quantity) + ' ');
+                return('$ ' + (35*quantity) + ' ');
         }
 	if(item.toLowerCase() == "soda")
         {
-                return('$' + (4*quantity) + ' ');
+                return('$ ' + (4*quantity) + ' ');
         }
 	if(item.toLowerCase() == "cookie")
         {
-                return('$' + (6*quantity) + ' ');
+                return('$ ' + (6*quantity) + ' ');
         }
 }
 

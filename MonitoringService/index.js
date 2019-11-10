@@ -3,7 +3,21 @@ var app = express();
 const fs = require('fs');
 
 app.get('/gettotal', function (req, res) {
-	return res.status(200).send("Total earnings: ")
+	
+	var data = fs.readFileSync('my-log/log.log', 'utf8');
+	var lines[] = data.split("\n");
+	var total = 0;
+
+	for(var i = 0; i < lines.length; i++)
+	{
+		var line[] = lines[i].split(" ");
+		if(line[0] == "PURCHASE")
+		{
+			var total = total + line[3];	
+		}
+	}
+	
+	return res.status(200).send("Total earnings: $" + total);
 });
 
 app.get('/gettopseller', function (req, res) {
