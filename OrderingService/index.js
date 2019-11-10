@@ -12,19 +12,39 @@ var date = new Date();
 
 app.get('/version', function (req, res) { 
 	
-	fs.appendFile('log/log.log', 'VERSION /version called' + getTime(), function (err) {
-	})
-	
+	fs.appendFile('log/log.log', ('VERSION '+ getTime() + '\n'), function (err) {});
 	return res.status(200).send('This is version 1 of the HotBurger service');
 });
 
 app.get('/getmenu', function (req, res) {
+	fs.appendFile('log/log.log', ('MENU ' + getTime() + '\n'), function (err) {});
 	return res.status(200).send("Hotdog: $20\nHamburger: $35\nSoda: $4\nCookie: $6");
 });
 
 app.post('/purchase/:item/:quantity', function (req, res) {
-	return res.status(200).send("Ordered: " + req.params.quantity + " " + req.params.item + "(s). (" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + " UTC)" );
+	fs.appendFile('log/log.log', ('PURCHASE ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n'), function (err) {});	
+	return res.status(200).send('PURCHASE ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n');
 });
+
+function getPrice(var item, var quantity)
+{
+	if(item == "Hotdog")
+	{
+		return('$' + (20*quantity) + ' ');
+	}
+	if(item == "Hamburger")
+        {
+                return('$' + (35*quantity) + ' ');
+        }
+	if(item == "Soda")
+        {
+                return('$' + (4*quantity) + ' ');
+        }
+	if(item == "Cookie")
+        {
+                return('$' + (6*quantity) + ' ');
+        }
+}
 
 function getTime()
 {
