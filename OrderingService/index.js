@@ -22,7 +22,7 @@ app.get('/getmenu', function (req, res) {
 });
 
 app.post('/purchase/:item/:quantity', function (req, res) {
-	fs.appendFile('my-log/log.log', ('PURCHASE ' + req.params.item + ' ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n'), function (err) {});	
+	fs.appendFile('my-log/log.log', ('PURCHASE ' + req.params.item + ' ' + getPrice(req.params.item, req.params.quantity) + getTime().toString() + '\n'), function (err) {});	
 	return res.status(200).send("Purchase successful!");
 });
 
