@@ -22,25 +22,25 @@ app.get('/getmenu', function (req, res) {
 });
 
 app.post('/purchase/:item/:quantity', function (req, res) {
-	fs.appendFile('log/log.log', ('PURCHASE ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n'), function (err) {});	
-	return res.status(200).send('PURCHASE ' + getPrice(req.params.item, req.params.quantity) + getTime() + '\n');
+	fs.appendFile('log/log.log', ('PURCHASE ' + req.params.item + ' ' + getPrice(req.params.item.toLowerCase(), req.params.quantity) + getTime() + '\n'), function (err) {});	
+	return res.status(200);
 });
 
 function getPrice(item, quantity)
 {
-	if(item == "Hotdog")
+	if(item == "hotdog")
 	{
 		return('$' + (20*quantity) + ' ');
 	}
-	if(item == "Hamburger")
+	if(item == "hamburger")
         {
                 return('$' + (35*quantity) + ' ');
         }
-	if(item == "Soda")
+	if(item == "soda")
         {
                 return('$' + (4*quantity) + ' ');
         }
-	if(item == "Cookie")
+	if(item == "cookie")
         {
                 return('$' + (6*quantity) + ' ');
         }
