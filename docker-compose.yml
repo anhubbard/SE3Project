@@ -12,7 +12,7 @@ services:
                 container_name: monitoring_service
                 build: ./MonitoringService
                 volumes:
-                        - "my-logs:/SE3Project/MonitoringService/log"                
+                        - "my-logs:/SE3Project/MonitoringService/log:ro"                
                 ports:
                         - "8080:8080"
 volumes:
