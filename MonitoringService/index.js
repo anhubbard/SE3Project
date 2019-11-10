@@ -9,9 +9,9 @@ app.get('/gettotal', function (req, res) {
 	for(var i = 0; i < lines.length; i++)
 	{
 		var line = lines[i].split(" ");
-		console.log(parseInt(line[3]));
 		if(line[0] == "PURCHASE")
 		{
+			console.log(parseInt(line[3]));
 			var total = total + parseInt(line[3]);	
 		}
 	}
@@ -70,7 +70,7 @@ app.get('/getlastrequesttime', function (req, res) {
 
 	if(line[0] == "PURCHASE")
 	{
-		return res.status(200).send("Time of last request: " + line[4]);
+		return res.status(200).send("Time of last request: " + line[3]);
 	}
 	else
 	{
