@@ -69,6 +69,9 @@ app.get('/getlastrequesttime', function (req, res) {
 	var lines = getLines();
 	var currentLine = (lines.length-2);
 	var line = lines[currentLine];
+	
+	var time = line[4];
+	console.log(time);
 
 	if(line[0] == "PURCHASE")
 	{
