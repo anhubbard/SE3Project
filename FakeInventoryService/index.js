@@ -11,6 +11,6 @@ app.post('/setcount/:item/:quantity', function (req, res) {
 	return res.status(200).send("Inventory updated!");
 });
 
-app.listen(82, function() {
-	console.log("Listening on port 82");
+app.listen(8082, function() {
+	console.log("Listening on port 8082");
 });
