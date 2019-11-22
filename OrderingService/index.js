@@ -13,7 +13,7 @@ var date = new Date();
 app.get('/version', function (req, res) { 
 	
 	fs.appendFile('my-log/log.log', ('VERSION '+ getTime() + '\n'), function (err) {});
-	return res.status(200).send('This is version 1 of the HotBurger service');
+	return res.status(200).send('This is version 2 of the HotBurger service');
 });
 
 app.get('/getmenu', function (req, res) {

@@ -1,0 +1,14 @@
+{
+  "name": "fakeinventoryservice",
+  "version": "1.0.0",
+  "description": "fake inventory service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amber Hubbard and Ryan McCourt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
