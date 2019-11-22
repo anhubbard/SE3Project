@@ -1,6 +1,6 @@
 {
   "name": "se3project",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A simple node application for the first project in Software Engineering Management",
   "main": "index.js",
   "scripts": {
