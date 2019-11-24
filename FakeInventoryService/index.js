@@ -8,7 +8,12 @@ app.get('/getcount/:item', function (req, res) {
 });
 
 app.post('/setcount/:item/:quantity', function (req, res) {
+	fs.appendFile('inventory.txt', (req.params.item + ' ' + req.params.quantity);
 	return res.status(200).send("Inventory updated!");
+});
+
+app.get('/test', function(req, res) {
+	return res.status(200).send("working");
 });
 
 app.listen(8082, function() {

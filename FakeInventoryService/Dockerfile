@@ -4,5 +4,5 @@ RUN git clone https://github.com/anhubbard/SE3Project.git
 WORKDIR /SE3Project/FakeInventoryService
 RUN npm install
 CMD ["git", "pull"]
-CMD ["touch", "invetory.txt"]
+CMD ["touch", "inventory.txt"]
 CMD ["node", "index.js"]
