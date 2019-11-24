@@ -1,0 +1,11 @@
+cookie 4
+hamburger 10
+hotdog 6
+soda 10
+hotdog 3
+hamburger 2
+cookie 9
+hotdog 1
+soda 10
+hotdog 4
+soda 3
