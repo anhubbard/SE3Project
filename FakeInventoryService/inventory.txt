@@ -9,3 +9,4 @@ hotdog 1
 soda 10
 hotdog 4
 soda 3
+cookie 5
