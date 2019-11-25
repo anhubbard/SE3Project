@@ -27,8 +27,7 @@ function orderFood() {
 			break;
 	}
 	
-	//var url = "localhost:80/purchase/" + item + "/" + quantity;
-	axios.post('http://localhost:80/purchase/' + item + '/' + quantity, { 
+	await axios.post('http://localhost:80/purchase/' + item + '/' + quantity, { 
 
 	})
 	.then(function() { 
