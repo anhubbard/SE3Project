@@ -27,7 +27,7 @@ function orderFood() {
 			break;
 	}
 	
-	axios.post('127.0.0.1:80/purchase/' + item + '/' + quantity, { 
+	axios.post('http://' + location.host + ':80/purchase/' + item + '/' + quantity, { 
 
 	})
 	.then(function() { 
