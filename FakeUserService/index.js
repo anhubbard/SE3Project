@@ -27,7 +27,7 @@ function orderFood() {
 			break;
 	}
 	
-	axios.post('http://' + location.host + ':80/purchase/' + item + '/' + quantity, { 
+	axios.post('http://ordering_service:80/purchase/' + item + '/' + quantity, { 
 
 	})
 	.then(function() { 
