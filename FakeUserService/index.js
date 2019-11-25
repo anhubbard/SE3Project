@@ -4,8 +4,39 @@ const axios = require('axios');
 
 function orderFood() {
 	
-	console.log("Sent request!");
+	var randItem = (Math.floor(Math.random() * 4) + 1);
+	var quantity = (Math.floor(Math.random() * 10) + 1);
+	var item
 
+	switch(randItem)
+	{
+		case 1:
+			item = "hotdog";
+			break;
+		case 2:
+			item = "hamburger";
+			break;
+		case 3:
+			item = "soda";
+			break;
+		case 4:
+			item = "cookie";
+			break;
+		default:
+			item = "hotdog";
+			break;
+	}
+	
+	var url = "localhost:80/purchase/" + item + "/" + quantity;
+	axios.post(url, { 
+
+	})
+	.then(function() { 
+		console.log("Purchased: " + quantity + " " + item + "(s).");
+	})
+	.catch(function(error) {
+		console.log("Error");
+	});
 }
 
 setInterval(orderFood, 3000);
