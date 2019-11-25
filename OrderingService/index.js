@@ -33,7 +33,11 @@ app.post('/purchase/:item/:quantity', function (req, res) {
 		{
 			fs.appendFile('my-log/log.log', ('PURCHASE ' + req.params.item + ' ' + getPrice(req.params.item, 0) + getTime() + '\n'), function (err) {});
 		}
-	}
+	})
+	.catch(function(error) {
+		console.log(error);
+	});
+
 	return res.status(200).send("Purchase successful!");
 });
 
