@@ -27,15 +27,15 @@ function orderFood() {
 			break;
 	}
 	
-	var url = "localhost:80/purchase/" + item + "/" + quantity;
-	axios.post(url, { 
+	//var url = "localhost:80/purchase/" + item + "/" + quantity;
+	axios.post('http://localhost:80/' + item + '/' + quantity, { 
 
 	})
 	.then(function() { 
 		console.log("Purchased: " + quantity + " " + item + "(s).");
 	})
 	.catch(function(error) {
-		console.log("Error");
+		console.log(error);
 	});
 }
 
