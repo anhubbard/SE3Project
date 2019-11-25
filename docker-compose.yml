@@ -20,6 +20,11 @@ services:
                 build: ./FakeInventoryService
                 ports:
                         - "8082:8082"
+        user:
+                container_name: fake_user_service
+                build: ./FakeUserService
+                ports:
+                        - "8084:8084"
 volumes:
         my-log:
                 external: false
