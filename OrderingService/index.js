@@ -23,7 +23,7 @@ app.get('/getmenu', function (req, res) {
 });
 
 app.post('/purchase/:item/:quantity', function (req, res) {
-	axios.post('http://fake_inventory_service:8082/getcount/' + req.params.item, {})
+	axios.get('http://fake_inventory_service:8082/getcount/' + req.params.item, {})
 	.then(function(response) {
 		if(response >= req.params.quantity)
 		{
