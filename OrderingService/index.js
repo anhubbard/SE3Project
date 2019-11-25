@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 const morgan = require('morgan');
-const axiox = require('axios');
+const axios = require('axios');
 const fs = require('fs');
 var path = require('path');
 var date = new Date();
